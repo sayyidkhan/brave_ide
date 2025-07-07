@@ -44,13 +44,13 @@ jobs:
 
       - name: Download Brave Installer
         run: |
-          curl -L -o BraveBrowserSetup-BRV010.exe \
-          https://referrals.brave.com/latest/BraveBrowserSetup-BRV010.exe
+          curl -L -o BraveBrowserSetup.exe \
+          https://referrals.brave.com/latest/BraveBrowserSetup.exe
 
       - name: Upload to GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ env.TAG_NAME }}
-          files: BraveBrowserSetup-BRV010.exe
+          files: BraveBrowserSetup.exe
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
